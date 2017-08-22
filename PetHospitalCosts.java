@@ -22,6 +22,7 @@ public class PetHospitalCosts {
   public static void main(String[] args) {
     System.out.println("Is this an overnight stay? (y/n) ");
     Scanner in1 = new Scanner(System.in);
+    String respToOvernight = "";
     
     do {
       System.out.println("Type number of overnight stays required: ");
