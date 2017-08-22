@@ -25,7 +25,7 @@ public class PetHospitalCosts {
     Scanner in = new Scanner(System.in);
     numNights = in.nextInt();
     
-    int overnightCharges = calcOvernightCharges(numNights);
+    double overnightCharges = calcOvernightCharges(numNights);
     double totalCharge = overnightCharges + calcMedicationCharges() + 
        calcLabServiceCharges();
   }
@@ -50,6 +50,9 @@ public class PetHospitalCosts {
   public static double calcLabServiceCharges() {
     double bloodTest = 125;
     double urineTest = 120;
+    
+    double totalMedicCharges = bloodTest + urineTest;
+    return totalMedicCharges;
   }
   
 } // End of: class
