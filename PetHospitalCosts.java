@@ -25,15 +25,21 @@ public class PetHospitalCosts {
     String respToOvernight = "";
     
     do {
-      System.out.println("Type number of overnight stays required: ");
-      Scanner in2 = new Scanner(System.in);
-      int numNights = in2.nextInt();
-    
-      double overnightCharges = calcOvernightCharges(numNights);
       double medCharges = calcMedicationCharges();
       double labServCharges = calcLabServiceCharges();
-      double totalCharge = overnightCharges + medCharges + labServCharges;
+      
+      if (respToOvernight == 'y') {
+        System.out.println("Type number of overnight stays required: ");
+        Scanner in2 = new Scanner(System.in);
+        int numNights = in2.nextInt();
     
+        double overnightCharges = calcOvernightCharges(numNights);
+        double totalCharge = overnightCharges + medCharges + labServCharges;
+      }
+      else {
+        totalCharge = medCharges + labServCharges;
+      }
+      
       // %5.2f - at least 5 spaces total
       System.out.printf("Total charge: $%5.2f", totalCharge);
       System.out.println();
