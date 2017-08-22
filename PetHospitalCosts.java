@@ -21,10 +21,11 @@ public class PetHospitalCosts {
 
   public static void main(String[] args) {
     System.out.println("Is this an overnight stay? (y/n) ";
+    Scanner in1 = new Scanner(System.in);
     
     System.out.println("Type number of overnight stays required: ");
-    Scanner in = new Scanner(System.in);
-    int numNights = in.nextInt();
+    Scanner in2 = new Scanner(System.in);
+    int numNights = in2.nextInt();
     
     double overnightCharges = calcOvernightCharges(numNights);
     double medCharges = calcMedicationCharges();
