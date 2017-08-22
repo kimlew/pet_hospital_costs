@@ -23,18 +23,20 @@ public class PetHospitalCosts {
     System.out.println("Is this an overnight stay? (y/n) ";
     Scanner in1 = new Scanner(System.in);
     
-    System.out.println("Type number of overnight stays required: ");
-    Scanner in2 = new Scanner(System.in);
-    int numNights = in2.nextInt();
+    do {
+      System.out.println("Type number of overnight stays required: ");
+      Scanner in2 = new Scanner(System.in);
+      int numNights = in2.nextInt();
     
-    double overnightCharges = calcOvernightCharges(numNights);
-    double medCharges = calcMedicationCharges();
-    double labServCharges = calcLabServiceCharges();
-    double totalCharge = overnightCharges + medCharges + labServCharges;
+      double overnightCharges = calcOvernightCharges(numNights);
+      double medCharges = calcMedicationCharges();
+      double labServCharges = calcLabServiceCharges();
+      double totalCharge = overnightCharges + medCharges + labServCharges;
     
-    // %5.2f - at least 5 spaces total
-    System.out.printf("Total charge: $%5.2f", totalCharge);
-    System.out.println();
+      // %5.2f - at least 5 spaces total
+      System.out.printf("Total charge: $%5.2f", totalCharge);
+      System.out.println();
+    } while (respToOvernight.equalsIgnoreCase("y"));  
   }
   
   public static double calcOvernightCharges(int numNights) {
