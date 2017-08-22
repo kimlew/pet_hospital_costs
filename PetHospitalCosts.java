@@ -28,6 +28,10 @@ public class PetHospitalCosts {
     double medCharges = calcMedicationCharges();
     double labServCharges = calcLabServiceCharges();
     double totalCharge = overnightCharges + medCharges + labServCharges;
+    
+    // %5.2f - at least 5 spaces total
+    System.out.printf("Total charge: $%5.2f", totalCharge);
+    System.out.println();
   }
   
   public static double calcOvernightCharges(int numNights) {
