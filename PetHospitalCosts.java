@@ -36,7 +36,8 @@ public class PetHospitalCosts {
     }
     
     public static double calcLabServiceCharges() {
-      
+      double bloodTest = 125;
+      double urineTest = 120;
     }
     
 } // End of: class
