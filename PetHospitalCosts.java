@@ -20,7 +20,7 @@ import java.util.Scanner;
 public class PetHospitalCosts {
 
     public static void main(String[] args) {
-        
+        System.out.println("Type number of overnight stays required: ");
     }
 
     
