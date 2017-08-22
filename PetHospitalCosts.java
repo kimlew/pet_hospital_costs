@@ -25,8 +25,8 @@ public class PetHospitalCosts {
 
     
     public static double calcOvernightCharges() {
-      //double cleanBedding = 10.50;
-      //double cleanRoom = 50.00;
+      double cleanBedding = 10.50;
+      double cleanRoom = 50.00;
     
     }
     
