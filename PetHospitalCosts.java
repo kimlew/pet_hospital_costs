@@ -26,6 +26,8 @@ public class PetHospitalCosts {
     numNights = in.nextInt();
     
     int overnightCharges = calcOvernightCharges(numNights);
+    double totalCharge = overnightCharges + calcMedicationCharges() + 
+       calcLabServiceCharges();
   }
 
   
@@ -41,7 +43,8 @@ public class PetHospitalCosts {
     double antiseptic = 10;
     double genAnaesthetic = 75;
     
-    
+    double totalMedicCharges = antiseptic + genAnaesthetic;
+    return totalMedicCharges;
   }
   
   public static double calcLabServiceCharges() {
