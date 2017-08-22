@@ -24,9 +24,13 @@ public class PetHospitalCosts {
     }
 
     
-    public static double calcOvernightCharges () {
+    public static double calcOvernightCharges() {
+    
     }
     
+    public static double calcMedicationCharges() {
+    
+    }
     
     
 } // End of: class
