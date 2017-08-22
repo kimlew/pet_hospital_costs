@@ -26,16 +26,16 @@ public class PetHospitalCosts {
     numNights = in.nextInt();
     
     double overnightCharges = calcOvernightCharges(numNights);
-    double totalCharge = overnightCharges + calcMedicationCharges() + 
-       calcLabServiceCharges();
+    double medCharges = calcMedicationCharges();
+    double labServCharges = calcLabServiceCharges();
+    double totalCharge = overnightCharges + medCharges + labServCharges;
   }
-
   
   public static double calcOvernightCharges(numNights) {
     double cleanBedding = 10.50;
     double cleanRoom = 50.00;
     
-    totalOvernightCosts = numNights * (cleanBedding + cleanRoom);
+    double totalOvernightCosts = numNights * (cleanBedding + cleanRoom);
     return totalOvernightCosts;
   }
   
