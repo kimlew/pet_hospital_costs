@@ -18,27 +18,35 @@ import java.util.Scanner;
 
 
 public class PetHospitalCosts {
+  int numNights = 0;
 
-    public static void main(String[] args) {
-        System.out.println("Type number of overnight stays required: ");
-    }
+  public static void main(String[] args) {
+      
+      
+      System.out.println("Type number of overnight stays required: ");
+      Scanner in = new Scanner(System.in);
+      numNights = in.nextInt();
+  }
 
+  
+  public static double calcOvernightCharges(int numNights) {
+    double cleanBedding = 10.50;
+    double cleanRoom = 50.00;
     
-    public static double calcOvernightCharges() {
-      double cleanBedding = 10.50;
-      double cleanRoom = 50.00;
     
-    }
-    
-    public static double calcMedicationCharges() {
-      double antiseptic = 10;
-      double genAnaesthetic = 75;
-    }
-    
-    public static double calcLabServiceCharges() {
-      double bloodTest = 125;
-      double urineTest = 120;
-    }
-    
+    //totalOvernightCosts = 
+  
+  }
+  
+  public static double calcMedicationCharges() {
+    double antiseptic = 10;
+    double genAnaesthetic = 75;
+  }
+  
+  public static double calcLabServiceCharges() {
+    double bloodTest = 125;
+    double urineTest = 120;
+  }
+  
 } // End of: class
 
