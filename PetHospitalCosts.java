@@ -32,6 +32,9 @@ public class PetHospitalCosts {
     
     }
     
+    public static double calcLabServiceCharges() {
+    
+    }
     
 } // End of: class
 
