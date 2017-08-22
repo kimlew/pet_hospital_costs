@@ -33,14 +33,15 @@ public class PetHospitalCosts {
     double cleanBedding = 10.50;
     double cleanRoom = 50.00;
     
-    
-    //totalOvernightCosts = 
-  
+    totalOvernightCosts = numNights * (cleanBedding + cleanRoom);
+    return totalOvernightCosts;
   }
   
   public static double calcMedicationCharges() {
     double antiseptic = 10;
     double genAnaesthetic = 75;
+    
+    
   }
   
   public static double calcLabServiceCharges() {
