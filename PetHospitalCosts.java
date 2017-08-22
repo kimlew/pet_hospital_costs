@@ -21,15 +21,15 @@ public class PetHospitalCosts {
   int numNights = 0;
 
   public static void main(String[] args) {
-      
-      
-      System.out.println("Type number of overnight stays required: ");
-      Scanner in = new Scanner(System.in);
-      numNights = in.nextInt();
+    System.out.println("Type number of overnight stays required: ");
+    Scanner in = new Scanner(System.in);
+    numNights = in.nextInt();
+    
+    int overnightCharges = calcOvernightCharges(numNights);
   }
 
   
-  public static double calcOvernightCharges(int numNights) {
+  public static double calcOvernightCharges(numNights) {
     double cleanBedding = 10.50;
     double cleanRoom = 50.00;
     
