@@ -20,6 +20,8 @@ public class PetHospitalCosts {
   //int numNights = 0;
 
   public static void main(String[] args) {
+    System.out.println("Is this an overnight stay? (y/n) ";
+    
     System.out.println("Type number of overnight stays required: ");
     Scanner in = new Scanner(System.in);
     int numNights = in.nextInt();
