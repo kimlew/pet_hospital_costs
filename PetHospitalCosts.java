@@ -22,13 +22,14 @@ public class PetHospitalCosts {
   public static void main(String[] args) {
     System.out.println("Is this an overnight stay? (y/n) ");
     Scanner in1 = new Scanner(System.in);
-    String respToOvernight = "";
+    String isOvernight = in1.nextString();
+    isOvernight = in1.toLowerCase();
     
     do {
       double medCharges = calcMedicationCharges();
       double labServCharges = calcLabServiceCharges();
       
-      if (respToOvernight == 'y') {
+      if (isOvernight == 'y') {
         System.out.println("Type number of overnight stays required: ");
         Scanner in2 = new Scanner(System.in);
         int numNights = in2.nextInt();
@@ -43,8 +44,8 @@ public class PetHospitalCosts {
       // %5.2f - at least 5 spaces total
       System.out.printf("Total charge: $%5.2f", totalCharge);
       System.out.println();
-    } while (respToOvernight.equalsIgnoreCase("y"));  
-  }
+    } while (isOvernight.equalsIgnoreCase("y"));  
+  } // End of: main()
   
   public static double calcOvernightCharges(int numNights) {
     double cleanBedding = 10.50;
