@@ -23,18 +23,19 @@ public class PetHospitalCosts {
     double medCharges = calcMedicationCharges();
     double labServCharges = calcLabServiceCharges();
     double totalCharge = 0;
-      
-    if (checkIfOvernight() == true) {
+    String anotherPatient = "";
     
     do {
-      // Ask for how many nights & add in overnight charges to calc
-      System.out.println("Type number of overnight stays required: ");
-      Scanner in2 = new Scanner(System.in);
-      int numNights = in2.nextInt();
+      if (checkIfOvernight() == true) {
+        // Ask for how many nights & add in overnight charges to calc
+        System.out.println("Type number of overnight stays required: ");
+        Scanner in2 = new Scanner(System.in);
+        int numNights = in2.nextInt();
         
-      if (numNights > 0) { 
-        double overnightCharges = calcOvernightCharges(numNights);
-        totalCharge = overnightCharges + medCharges + labServCharges;
+        if (numNights > 0) { 
+          double overnightCharges = calcOvernightCharges(numNights);
+          totalCharge = overnightCharges + medCharges + labServCharges;
+        }
       }
       else {
         totalCharge = medCharges + labServCharges;
@@ -43,7 +44,11 @@ public class PetHospitalCosts {
       // %5.2f - at least 5 spaces total
       System.out.printf("Total charge: $%5.2f", totalCharge);
       System.out.println();
-    } while (isOvernight.equalsIgnoreCase("y"));
+      System.out.println("Is there another patient? y/n");
+      Scanner in3 = new Scanner(System.in);
+      anotherPatient = in3.nextLine();
+      
+    } while (anotherPatient.equalsIgnoreCase("y"));
      
   } // End of: main()
   
