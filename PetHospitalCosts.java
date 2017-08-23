@@ -22,7 +22,7 @@ public class PetHospitalCosts {
   public static void main(String[] args) {
     System.out.println("Is this an overnight stay? (y/n) ");
     Scanner in1 = new Scanner(System.in);
-    String isOvernight = in1.nextString();
+    String isOvernight = in1.nextLine();
     isOvernight = in1.toLowerCase();
     
     do {
