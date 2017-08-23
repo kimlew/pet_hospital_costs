@@ -20,10 +20,7 @@ public class PetHospitalCosts {
   //int numNights = 0;
 
   public static void main(String[] args) {
-    System.out.println("Is this an overnight stay? (y/n) ");
-    Scanner in1 = new Scanner(System.in);
-    String isOvernight = in1.nextLine();
-    isOvernight = isOvernight.toLowerCase();
+
     
     do {
       double medCharges = calcMedicationCharges();
@@ -49,6 +46,20 @@ public class PetHospitalCosts {
     } while (isOvernight.equalsIgnoreCase("y"));  
   } // End of: main()
   
+  public static boolean checkIfOvernight() {
+    System.out.println("Is this an overnight stay? (y/n) ");
+    Scanner in1 = new Scanner(System.in);
+    String isOvernight = in1.nextLine();
+    isOvernight = isOvernight.toLowerCase();
+    
+    if (isOvernight == "y") {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+    
   public static double calcOvernightCharges(int numNights) {
     double cleanBedding = 10.50;
     double cleanRoom = 50.00;
