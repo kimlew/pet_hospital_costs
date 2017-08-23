@@ -23,7 +23,7 @@ public class PetHospitalCosts {
     System.out.println("Is this an overnight stay? (y/n) ");
     Scanner in1 = new Scanner(System.in);
     String isOvernight = in1.nextLine();
-    isOvernight = in1.toLowerCase();
+    isOvernight = isOvernight.toLowerCase();
     
     do {
       double medCharges = calcMedicationCharges();
