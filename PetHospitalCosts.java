@@ -30,11 +30,12 @@ public class PetHospitalCosts {
       double labServCharges = calcLabServiceCharges();
       double totalCharge = 0;
       
-      if (isOvernight == "y") {
-        System.out.println("Type number of overnight stays required: ");
-        Scanner in2 = new Scanner(System.in);
-        int numNights = in2.nextInt();
-    
+      // Ask for how many nights & add in overnight charges to calc
+      System.out.println("Type number of overnight stays required: ");
+      Scanner in2 = new Scanner(System.in);
+      int numNights = in2.nextInt();
+        
+      if (numNights > 0) { 
         double overnightCharges = calcOvernightCharges(numNights);
         totalCharge = overnightCharges + medCharges + labServCharges;
       }
@@ -73,4 +74,3 @@ public class PetHospitalCosts {
   }
   
 } // End of: class
-
