@@ -50,16 +50,28 @@ public class PetHospitalCosts {
       Scanner in2 = new Scanner(System.in);
       anotherPatient = in2.next();
       
+      if (!( (anotherPatient.equals("y")) || (anotherPatient.equals("n")) )) {
+        System.out.println("Is there another patient? (y/n)");
+        Scanner in3 = new Scanner(System.in);
+        anotherPatient = in3.next();
+      }
+      
     } while (anotherPatient.equalsIgnoreCase("y"));
      
   } // End of: main()
   
   public static boolean checkIfOvernight() {
     System.out.println("Is this an overnight stay? (y/n) ");
-    
-    Scanner in1 = new Scanner(System.in); // BEST practice: ONLY 1 scanner object & pass as param
+    Scanner in1 = new Scanner(System.in);
     String isOvernight = in1.nextLine();
     isOvernight = isOvernight.toLowerCase();
+    
+    if (!( (isOvernight.equals("y")) || (isOvernight.equals("n")) )) {
+      System.out.println("Is this an overnight stay? (y/n) ");
+      Scanner in2 = new Scanner(System.in);
+      isOvernight = in1.nextLine();
+      isOvernight = isOvernight.toLowerCase();
+    }
     
     if (isOvernight.equals("y")) { // Strings require .equals
       return true;
