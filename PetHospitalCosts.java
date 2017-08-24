@@ -44,10 +44,11 @@ public class PetHospitalCosts {
       // %5.2f - at least 5 spaces total
       System.out.printf("Total charge: $%5.2f", totalCharge);
       System.out.println();
+      System.out.println();
       
-      System.out.println("Is there another patient? y/n");
+      System.out.println("Is there another patient? (y/n)");
       Scanner in3 = new Scanner(System.in);
-      anotherPatient = in3.nextLine();
+      anotherPatient = in3.next();
       
     } while (anotherPatient.equalsIgnoreCase("y"));
      
@@ -55,6 +56,7 @@ public class PetHospitalCosts {
   
   public static boolean checkIfOvernight() {
     System.out.println("Is this an overnight stay? (y/n) ");
+    
     Scanner in1 = new Scanner(System.in); // BEST practice: ONLY 1 scanner object & pass as param
     String isOvernight = in1.nextLine();
     isOvernight = isOvernight.toLowerCase();
