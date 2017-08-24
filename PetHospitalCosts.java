@@ -56,7 +56,7 @@ public class PetHospitalCosts {
         anotherPatient = in3.next();
       }
       
-    } while (anotherPatient.equalsIgnoreCase("y"));
+    } while (anotherPatient.equalsIgnoreCase("y")); // Use instead of .toLowerCase()
      
   } // End of: main()
   
