@@ -63,13 +63,13 @@ public class PetHospitalCosts {
   public static boolean checkIfOvernight() {
     System.out.println("Is this an overnight stay? (y/n) ");
     Scanner in1 = new Scanner(System.in);
-    String isOvernight = in1.nextLine();
+    String isOvernight = in1.next();
     isOvernight = isOvernight.toLowerCase();
     
     if (!( (isOvernight.equals("y")) || (isOvernight.equals("n")) )) {
       System.out.println("Is this an overnight stay? (y/n) ");
       Scanner in2 = new Scanner(System.in);
-      isOvernight = in1.nextLine();
+      isOvernight = in1.next();
       isOvernight = isOvernight.toLowerCase();
     }
     
