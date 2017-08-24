@@ -29,8 +29,8 @@ public class PetHospitalCosts {
       if (checkIfOvernight() == true) {
         // Ask for how many nights & add in overnight charges to calc
         System.out.println("Type number of overnight stays required: ");
-        Scanner in2 = new Scanner(System.in);
-        int numNights = in2.nextInt();
+        Scanner in = new Scanner(System.in);
+        int numNights = in.nextInt();
         
         if (numNights > 0) { 
           double overnightCharges = calcOvernightCharges(numNights);
@@ -47,8 +47,8 @@ public class PetHospitalCosts {
       System.out.println();
       
       System.out.println("Is there another patient? (y/n)");
-      Scanner in3 = new Scanner(System.in);
-      anotherPatient = in3.next();
+      Scanner in2 = new Scanner(System.in);
+      anotherPatient = in2.next();
       
     } while (anotherPatient.equalsIgnoreCase("y"));
      
